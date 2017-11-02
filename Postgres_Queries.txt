@@ -1,0 +1,56 @@
+1.
+
+create table points (DESCRIPTION varchar(15), LONG_LAT geometry);
+
+insert into points
+values('My Home',ST_GeomFromText('POINT(-118.2825876 34.0347844)'));
+
+insert into POINTS
+values('Bacaro L.A.',ST_GeomFromText('POINT(-118.2835432 34.034522)'));
+
+insert into POINTS
+values('23rd St. Cafe',ST_GeomFromText('POINT(-118.2811586 34.0336482)'));
+
+insert into POINTS
+values('Union Theatre',ST_GeomFromText('POINT(-118.2848088 34.0341572)'));
+
+insert into POINTS
+values('Papa Johns',ST_GeomFromText('POINT(-118.2838211 34.0352967)'));
+
+insert into POINTS
+values('Petes Burger',ST_GeomFromText('POINT(-118.2839075 34.0339862)'));
+
+insert into POINTS
+values('Hoover Rec Cen',ST_GeomFromText('POINT(-118.2840594 34.0332088)'));
+
+insert into POINTS
+values('Friends House',ST_GeomFromText('POINT(-118.2859423 34.0346158)'));
+
+insert into POINTS
+values('Flower Store',ST_GeomFromText('POINT(-118.2837389 34.0358817)'));
+
+select ST_AsText(ST_ConvexHull(ST_Collect(LONG_LAT))) from points;
+
+-----------------------------RESULT--------------------------------------------
+
+POLYGON((-118.2840594 34.0332088,-118.2859423 34.0346158,-118.2837389 34.0358817,-118.2811586 34.0336482,-118.2840594 34.0332088))
+
+===============================================================================
+
+2.
+
+select point2.DESCRIPTION 
+from points as point1, points as point2
+where point1.DESCRIPTION='My Home' and ST_DISTANCE(point1.LONG_LAT,point2.LONG_LAT)!=0
+order by ST_DISTANCE(point1.LONG_LAT,point2.LONG_LAT)
+fetch first 3 rows only;
+
+-----------------------------RESULT--------------------------------------------
+
+description
+--------------
+ Bacaro L.A.
+ Papa Johns
+ Petes Burger
+
+===============================================================================

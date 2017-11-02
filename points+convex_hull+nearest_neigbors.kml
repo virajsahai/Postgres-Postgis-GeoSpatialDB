@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+<Style id="c_h">
+<PolyStyle>  
+<outline>0</outline>
+<color>#a00023ff</color>
+</PolyStyle>
+</Style>
+<Placemark><name>My Home</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2825876,34.0347844</coordinates></Point>
+</Placemark>
+<Placemark><name>Bacaro L.A.</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2835432,34.034522</coordinates></Point>
+</Placemark>
+<Placemark><name>23rd St. Cafe</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2811586,34.0336482</coordinates></Point>
+</Placemark>
+<Placemark><name>Union Theatre</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2848088,34.0341572</coordinates></Point>
+</Placemark>
+<Placemark><name>Papa Johns</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2838211,34.0352967</coordinates></Point>
+</Placemark>
+<Placemark><name>Petes Burger</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2839075,34.0339862</coordinates></Point>
+</Placemark>
+<Placemark><name>Hoover Rec Cen</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2840594,34.0332088</coordinates></Point>
+</Placemark>
+<Placemark><name>Friends House</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2859423,34.0346158</coordinates></Point>
+</Placemark>
+<Placemark><name>Flower Store</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2837389,34.0358817</coordinates></Point>
+</Placemark>
+<Placemark>
+<styleUrl>#c_h</styleUrl>
+<Polygon>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>
+	-118.2840594,34.0332088
+	-118.2859423,34.0346158
+	-118.2837389,34.0358817
+	-118.2811586,34.0336482
+	-118.2840594,34.0332088
+</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+</Placemark>
+<Placemark>
+<LineString width="2">
+<coordinates>-118.2825876,34.0347844 -118.2835432,34.034522</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<LineString width="2">
+<coordinates>-118.2825876,34.0347844 -118.2838211,34.0352967</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<LineString width="2">
+<coordinates>-118.2825876,34.0347844 -118.2839075,34.0339862</coordinates>
+</LineString>
+</Placemark>
+</Document></kml>
