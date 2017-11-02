@@ -5,3 +5,4 @@ Another thing done was to plot a spirograph with Seeley G. Mudd, LA at the centr
 
 Screenshots of the results can be found under the screeshot folder.
 
+point_gen.cpp generates points for the spirograph which are then copy-pasted to spiro.kml to plot it.
